@@ -1,25 +1,27 @@
 body {
-    background: rgb(125, 198, 205);
-    color: rgb(45, 45, 45);
+    background: rgb(34,139,34);
+    color: rgb(192, 192, 192);
     padding: 10px;
     font-family: arial;
 }
 #all-contents {
   max-width: 800px;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 /* navigation menu */
 nav {
-    background: rgb(239, 80, 41);
+    background: black;
    margin: 0 auto;
     display: flex;
     padding: 10px;
+    border-radius: 1%;
 }
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(192, 192, 192);
     flex: 1;
     margin: 0;
 }
@@ -32,12 +34,12 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(192, 192, 192);
 }
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background: rgb(34, 139, 34);
     display: flex;
 }
 .sidebar {
