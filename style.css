@@ -1,5 +1,5 @@
 body {
-    background: rgb(34,139,34);
+    background: rgb(17, 0, 255);
     color: rgb(247, 209, 153);
     padding: 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -55,10 +55,10 @@ main {
 }
 
 /* portfolio styles */
-#interests, #hobbies {
+#interests {
     border: 4px silver ridge;
     padding: 8px;
 }
-h2, h3, h4 {
+h2, h3 {
     margin: 0px;
 }
