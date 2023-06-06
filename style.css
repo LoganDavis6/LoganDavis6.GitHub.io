@@ -17,6 +17,7 @@ nav {
     display: flex;
     padding: 10px;
     border-radius: 1%;
+    margin-bottom: 20px;
 }
 h1 {
     display: flex;
