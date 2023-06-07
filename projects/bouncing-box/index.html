@@ -29,7 +29,7 @@
 	<div class="box">?</div>
 
 	<script>
-		(function(){
+		(function)
 			'use strict'
 			/* global jQuery */
 
@@ -75,11 +75,10 @@
 				//Code to increase posistion X by 10//
 				posistionX = posistionX + speed
 				moveBoxTo(posistionX);
-				if (posistionX>boardWidth) {
+				if (posistionX > boardWidth) {
 					speed = -speed;
 					posistionX = -posistonX;
 				}
-
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -90,8 +89,6 @@
 				points = points + 1
 				changeBoxText(points);
 				speed = speed + 3
-
-
 			};
 		}
 	</script>
