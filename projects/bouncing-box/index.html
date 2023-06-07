@@ -8,14 +8,14 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: red;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 700px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -62,8 +62,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var posistionX = 0
+			var points = 0
+			var speed = 10
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,9 +72,13 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
-			};
+				//Code to increase posistion X by 10//
+				posistionX = posistionX + speed
+				moveBoxTo(posistionX);
+				if (posistionX>boardWidth) {
+					speed = -speed;
+					posistionX = -posistonX;
+				}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -81,11 +86,14 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				posistionX = 0;
+				points = points + 1
+				changeBoxText(points);
+				speed = speed + 3
 
 
 			};
-		})();
+		}
 	</script>
 </body>
 </html>
