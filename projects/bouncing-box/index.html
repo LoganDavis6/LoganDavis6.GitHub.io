@@ -53,6 +53,7 @@
 			function moveBoxTo(newPositionX, newPosistionY) {
 				box.css("left", newPositionX);
 				box.css("top", newPosistionY)
+				box.css('background-color',colorStr);
 			}
 
 			// changes the text displayed on the Box
@@ -72,8 +73,13 @@
 			var speedY = 5
 			var boardHeight = 
 			jQuery(window).height(); 
-			var randNumX = Math.random() * boardWidth;
-			var randNumY = Math.random() * boardHeight;
+			var randNumX = 
+			Math.random(1) * boardWidth;
+			var randNumY = 
+			Math.random(1) * boardHeight;
+			var colorStr = "rgb (50,25,250)"
+			var randomNumberBetween0and255 = 
+			Math.random(1) * 255;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -110,7 +116,7 @@
 			points = points + 1
 			speed = speed + 3
 			speedY = speedY + 3
-
+			colorStr = Math.random(1) * 255
 
 			};
 		})();
