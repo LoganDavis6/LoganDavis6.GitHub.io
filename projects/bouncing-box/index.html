@@ -16,9 +16,11 @@
 			position: absolute;
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
+	
 		}
 		.board{
 			height: 100vh;
+			background-image: url("https://static.vecteezy.com/system/resources/previews/006/040/724/non_2x/fire-protection-icon-linear-sign-on-white-background-shield-with-fire-sign-fire-shield-shield-icon-vector.jpg")
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -48,8 +50,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPosistionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPosistionY)
 			}
 
 			// changes the text displayed on the Box
@@ -62,16 +65,36 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
-			
+			var posistionX = 0
+			var speed = 10
+			var points = 0
+			var posistionY = 0
+			var speedY = 5
+			var boardHeight = 
+			jQuery(window).height(); 
+			var randNumX = Math.random() * boardWidth;
+			var randNumY = Math.random() * boardHeight;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
+			posistionX = posistionX + speed
+			posistionY = posistionY + speedY
+			moveBoxTo(posistionX, posistionY);
+			if (posistionX > boardWidth) {
+				speed = speed * -1
+			}
+			if (posistionX < 0) {
+				speed = speed * -1
+			}
+			if (posistionY > boardHeight) {
+				speedY = speedY * -1
+			}
+			if (posistionY < 0) {
+				speedY = speedY * -1
+			}
 
 			};
 
@@ -81,7 +104,12 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+			posistionX = randNumX;
+			posistionY = randNumY;
+			changeBoxText(points);
+			points = points + 1
+			speed = speed + 3
+			speedY = speedY + 3
 
 
 			};
