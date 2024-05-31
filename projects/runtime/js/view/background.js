@@ -52,7 +52,7 @@ var background = function (window) {
 
             var circle;
             var circles = [];
-            
+
             
             function drawCircle() {
                 circle = draw.circle(10, "white", "LightGray", 2);
@@ -61,7 +61,7 @@ var background = function (window) {
                 background.addChild(circle); 
             }
 
-            for (var loopsCompleted = 0; loopsCompleted < 1000; loopsCompleted++){
+            for (var loopsCompleted = 100; loopsCompleted < 200; loopsCompleted++){
                 drawCircle()
             }
 
