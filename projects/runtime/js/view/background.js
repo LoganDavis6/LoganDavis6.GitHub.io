@@ -39,15 +39,15 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,999,'black');
+            var backgroundFill = draw.rect(canvasWidth,999,'green');
             background.addChild(backgroundFill);
             
             // TODO 2: - Add a moon and starfield
             var moon = draw.bitmap("img/moon.png");
-            moon.x = 850;
-            moon.y = 10;
-            moon.scaleX = 1.0;
-            moon.scaleY = 1.0;
+            moon.x = 1050;
+            moon.y = 15;
+            moon.scaleX = 0.5;
+            moon.scaleY = 0.5;
             background.addChild(moon);
 
             var circle;
