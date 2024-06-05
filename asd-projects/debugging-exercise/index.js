@@ -90,7 +90,7 @@ function update(){
     // to make seeing issues in the debugger slightly easier (in practice, you should use
     // circles.length, but do NOT change it here)
     for (var i = 0; i < maxCircles; i++){
-        var circle = circles[j];
+        var circle = maxCircles[i];
 
         // move the circle
         moveCircle(circle);
@@ -110,7 +110,7 @@ function update(){
 // this moves circles in memory but doesn't update them on the screen
 function moveCircle(circle){
     circle.x = circle.speedX;
-    circle.y += circle.speedY;
+    circle.y = circle.speedY;
 }
 
 // this bounces circles if they hit a wall
@@ -134,13 +134,13 @@ function bounceCircle(circle){
     // this bounces off the bottom wall
     else if (circle.y > boardHeight){
         circle.y -= circle.speedY;
-        circle.speedX *= -1;
+        circle.speedY *= -1;
     }
 }
 
 // this redraws the circle's position on the screen
 function updateCircleOnScreen(circle){
-    maxCircles = 0;
+    maxCircles = circle;
 
     // these lines redraw the circle's position
     $(circle.id).css('left', circle.x);
