@@ -96,10 +96,10 @@ function checkForNewDirection(event) {
     snake.head.direction = "up";
   }
   else if (activeKey === KEY.RIGHT) {
-    snake.head.direction === "right";
+    snake.head.direction = "right";
   }
-  else {
-    snake.head.direction === "down";
+  else if (activeKey === KEY.DOWN) {
+    snake.head.direction = "down";
   }
 
   // FILL IN THE REST
