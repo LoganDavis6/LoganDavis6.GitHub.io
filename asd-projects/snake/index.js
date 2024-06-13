@@ -149,22 +149,28 @@ function hasHitWall() {
   /* 
   TODO 8: Should return true if the snake's head has collided with the four walls of the
   board, false otherwise.
-  
   HINT: What will the row and column of the snake's head be if this were the case?
   */
-
-  return false;
+  if ((snake.head.row >= ROWS ) || (snake.head.row < 0) || (snake.head.column < 0) || (snake.head.column >= COLUMNS)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 function hasCollidedWithApple() {
   /* 
   TODO 9: Should return true if the snake's head has collided with the apple, 
-  false otherwise
-  
+  false otherwise  
   HINT: Both the apple and the snake's head are aware of their own row and column
   */
-
-  return false;
+  if ((snake.head.row === apple.row) && (snake.head.column === apple.column)){
+    return true;
+  }
+  else{
+    return false
+  }
 }
 
 function handleAppleCollision() {
