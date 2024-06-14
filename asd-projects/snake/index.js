@@ -121,12 +121,11 @@ function moveSnake() {
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
   for (var i = 1; i < snake.body.length; i++) {
-    var snakeSquare = snake.body[i];
 
     var nextSnakeSquare = snake.body[i] += 1;
-    var nextRow = "???";
-    var nextColumn = "???";
-    var nextDirection = "???";
+    var nextRow = nextsnakeSquare.row;
+    var nextColumn = nextsnakeSquare.column;
+    var nextDirection = nextsnakeSquare.direction;
 
     snakeSquare.direction = nextDirection;
     snakeSquare.row = nextRow;
