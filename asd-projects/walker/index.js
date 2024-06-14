@@ -16,6 +16,12 @@ function runProgram(){
     UP: 38,
     DOWN: 40
   }
+  var WASD {
+    LEFT: 
+    RIGHT: 
+    UP: 
+    DOWN: 
+  }
   // Game Item Objects
   var walker1 = {
     locationX: 0, //Stores the walker's X location
