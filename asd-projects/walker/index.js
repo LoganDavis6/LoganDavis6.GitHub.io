@@ -27,7 +27,7 @@ function runProgram(){
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown); //When a key is pressed, it calls the function handleKeyDown//
-
+  $(document).on('keyup', handleKeyUp);
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -63,6 +63,24 @@ function runProgram(){
       walker.speedY = 5
       console.log("Down was pressed");
     }
+    function handleKeyUp(event){
+      if (event.which === KEY.LEFT){
+        walker.speedX = walker.speedX - walker.speedX;
+        console.log("Left was let go");
+      }; 
+      if (event.which === KEY.UP){
+        walker.speedY = walker.speedY - walker.speedY;
+        console.log("Up was let go");
+      }
+      else if (event.which === KEY.RIGHT){
+        walker.speedX = walker.speedX - walker.speedX;
+        console.log("Right was let go");
+      }
+      else if (event.which === KEY.DOWN){
+        walker.speedY = walker.speedY - walker.speedY;
+        console.log("Down was let go");
+      }
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -79,8 +97,17 @@ function runProgram(){
   }
 
   function wallCollision(){
-    if (walker.locationX > $("#board").width()){
-      walker.speedX = 0;
+    if (walker.locationX > 385){
+      walker.speedX = walker.speedX - walker.speedX;
+    }
+    else if (walker.locationY > 385){
+      walker.speedY = walker.speedY - walker.speedY;
+    }
+    else if (walker.locationX < 5){
+      walker.speedX = walker.speedX - walker.speedX;
+    }
+    else if (walker.locationY < 5){
+      walker.speedY = walker.speedY - walker.speedY;
     }
   }
   
