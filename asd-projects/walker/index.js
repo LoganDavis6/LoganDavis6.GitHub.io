@@ -16,20 +16,8 @@ function runProgram(){
     UP: 38,
     DOWN: 40
   }
-  var WASD = {
-    LEFT: 65,
-    RIGHT: 68,
-    UP: 87,
-    DOWN: 83
-  }
   // Game Item Objects
-  var walker1 = {
-    locationX: 0, //Stores the walker's X location
-    locationY: 0, //Stores the walker's Y location
-    speedX: 0, //Stores the walker's X speed
-    speedY: 0 //Stores the walker's Y speed
-  }
-  var walker2 = {
+  var walker = {
     locationX: 0, //Stores the walker's X location
     locationY: 0, //Stores the walker's Y location
     speedX: 0, //Stores the walker's X speed
@@ -60,37 +48,37 @@ function runProgram(){
   //Prints what key was pressed
   function handleKeyDown(event) {
     if (event.which === KEY.LEFT){
-      walker1.speedX = -5
+      walker.speedX = -5
       console.log("Left was pressed");
     }; 
     if (event.which === KEY.UP){
-      walker1.speedY = -5
+      walker.speedY = -5
       console.log("Up was pressed");
     }
     else if (event.which === KEY.RIGHT){
-      walker1.speedX = 5
+      walker.speedX = 5
       console.log("Right was pressed");
     }
     else if (event.which === KEY.DOWN){
-      walker1.speedY = 5
+      walker.speedY = 5
       console.log("Down was pressed");
     }
   }
   function handleKeyUp(event){
     if (event.which === KEY.LEFT){
-      walker1.speedX = walker1.speedX - walker1.speedX;
+      walker.speedX = walker.speedX - walker.speedX;
       console.log("Left was let go");
     }; 
     if (event.which === KEY.UP){
-      walker1.speedY = walker1.speedY - walker1.speedY;
+      walker.speedY = walker.speedY - walker.speedY;
       console.log("Up was let go");
     }
     else if (event.which === KEY.RIGHT){
-      walker1.speedX = walker1.speedX - walker1.speedX;
+      walker.speedX = walker.speedX - walker.speedX;
       console.log("Right was let go");
     }
     else if (event.which === KEY.DOWN){
-      walker1.speedY = walker1.speedY - walker1.speedY;
+      walker.speedY = walker.speedY - walker.speedY;
       console.log("Down was let go");
     }
   }
@@ -99,27 +87,27 @@ function runProgram(){
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   function repositionGameItem(){
-    walker1.locationX += walker1.speedX;
-    walker1.locationY += walker1.speedY;
+    walker.locationX += walker.speedX;
+    walker.locationY += walker.speedY;
   }
 
   function redrawGameItem(){
-    $("#walker1").css("top", walker1.locationY);
-    $("#walker1").css("left", walker1.locationX);
+    $("#walker").css("top", walker.locationY);
+    $("#walker").css("left", walker.locationX);
   }
 
   function wallCollision(){
-    if (walker1.locationX > 385){
-      walker1.speedX = walker1.speedX - walker1.speedX;
+    if (walker.locationX > 385){
+      walker.speedX = walker.speedX - walker.speedX;
     }
-    else if (walker1.locationY > 385){
-      walker1.speedY = walker1.speedY - walker1.speedY;
+    else if (walker.locationY > 385){
+      walker.speedY = walker.speedY - walker.speedY;
     }
     else if (walke1r.locationX < 5){
-      walker1.speedX = walker1.speedX - walker1.speedX;
+      walker.speedX = walker.speedX - walker.speedX;
     }
-    else if (walker1.locationY < 5){
-      walker1.speedY = walker1.speedY - walker1.speedY;
+    else if (walker.locationY < 5){
+      walker.speedY = walker.speedY - walker.speedY;
     }
   }
   
