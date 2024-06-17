@@ -97,17 +97,21 @@ function runProgram(){
   }
 
   function wallCollision(){
-    if (walker.locationX > 385){
+    if (walker.locationX > 390){
       walker.speedX = walker.speedX - walker.speedX;
+      walker.locationX = 390;
     }
-    else if (walker.locationY > 385){
+    else if (walker.locationY > 390){
       walker.speedY = walker.speedY - walker.speedY;
+      walker.locationY = 390;
     }
-    else if (walke1r.locationX < 5){
+    else if (walker.locationX < 1){
       walker.speedX = walker.speedX - walker.speedX;
+      walker.locationX = 1;
     }
     else if (walker.locationY < 5){
       walker.speedY = walker.speedY - walker.speedY;
+      walker.locationY = 5;
     }
   }
   
