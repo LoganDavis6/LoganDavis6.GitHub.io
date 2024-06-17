@@ -16,11 +16,11 @@ function runProgram(){
     UP: 38,
     DOWN: 40
   }
-  var WASD {
-    LEFT: 
-    RIGHT: 
-    UP: 
-    DOWN: 
+  var WASD = {
+    LEFT: 65,
+    RIGHT: 68,
+    UP: 87,
+    DOWN: 83
   }
   // Game Item Objects
   var walker1 = {
