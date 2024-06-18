@@ -123,9 +123,9 @@ function moveSnake() {
   for (var i = 1; i < snake.body.length; i++) {
 
     var nextSnakeSquare = snake.body[i] += 1;
-    var nextRow = nextsnakeSquare.row;
-    var nextColumn = nextsnakeSquare.column;
-    var nextDirection = nextsnakeSquare.direction;
+    var nextRow = nextSnakeSquare.row;
+    var nextColumn = nextSnakeSquare.column;
+    var nextDirection = nextSnakeSquare.direction;
 
     snakeSquare.direction = nextDirection;
     snakeSquare.row = nextRow;
@@ -196,8 +196,7 @@ function handleAppleCollision() {
 
   /* 
   TODO 10: determine the location of the next snakeSquare based on the .row,
-  .column and .direction properties of the snake.tail snakeSquare
-  
+  .column and .direction properties of the snake.tail snakeSquare 
   HINT: snake.tail.direction will be either "left", "right", "up", or "down".
   If the tail is moving "left", place the next snakeSquare to its right. 
   If the tail is moving "down", place the next snakeSquare above it.
