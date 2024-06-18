@@ -109,9 +109,9 @@ function runProgram(){
       walker.speedX = walker.speedX - walker.speedX;
       walker.locationX = 1;
     }
-    else if (walker.locationY < 5){
+    else if (walker.locationY < 1){
       walker.speedY = walker.speedY - walker.speedY;
-      walker.locationY = 5;
+      walker.locationY = 1;
     }
   }
   
