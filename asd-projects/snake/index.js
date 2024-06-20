@@ -122,7 +122,7 @@ function moveSnake() {
   checkForNewDirection();
   for (var i = 1; i < snake.body.length; i++) {
 
-    var snakeSquare = snake.body.length;
+    var snakeSquare = snake.body[i];
 
     var nextSnakeSquare = snake.body[i] += 1;
     var nextRow = nextSnakeSquare.row;
