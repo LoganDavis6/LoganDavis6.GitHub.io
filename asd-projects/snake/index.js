@@ -120,7 +120,7 @@ function moveSnake() {
 
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
-  for (var i = 1; i < snake.body.length; i++) {
+  for (var i = snake.body.length; i > 1; i--) {
 
     var snakeSquare = snake.body[i];
 
