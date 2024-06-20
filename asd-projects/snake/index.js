@@ -119,11 +119,10 @@ function moveSnake() {
   */
 
   //Before moving the head, check for a new direction from the keyboard input
-  for (var i = snake.body.length - 1; i > 1; i--) {
+  for (var i = snake.body.length - 1; i >= 1; i--) {
+    var snakeSquare = snake.body[i];
 
-    var snakeSquare = snake.body[i]; //Was incorrect in general
-
-    var nextSnakeSquare = snake.body[i - 1]; //Almost correct
+    var nextSnakeSquare = snake.body[i - 1];
     var nextRow = nextSnakeSquare.row;
     var nextColumn = nextSnakeSquare.column;
     var nextDirection = nextSnakeSquare.direction;
@@ -234,8 +233,12 @@ function hasCollidedWithSnake() {
   head and each part of the snake's body also knows its own row and column.
   
   */
-
-  return false;
+  if(snake.head.column && snake.head.row === snake.body.column && snake.body.row && snake.body != snake.body[0]){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function endGame() {
