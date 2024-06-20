@@ -119,12 +119,11 @@ function moveSnake() {
   */
 
   //Before moving the head, check for a new direction from the keyboard input
-  checkForNewDirection();
-  for (var i = snake.body.length; i > 1; i--) {
+  for (var i = snake.body.length - 1; i > 1; i--) {
 
-    var snakeSquare = "???"; //Was incorrect in general
+    var snakeSquare = snake.body[i]; //Was incorrect in general
 
-    var nextSnakeSquare = snake.body[i]; //Almost correct
+    var nextSnakeSquare = snake.body[i - 1]; //Almost correct
     var nextRow = nextSnakeSquare.row;
     var nextColumn = nextSnakeSquare.column;
     var nextDirection = nextSnakeSquare.direction;
@@ -134,6 +133,8 @@ function moveSnake() {
     snakeSquare.column = nextColumn;
     repositionSquare(snakeSquare);
   }
+  checkForNewDirection();
+
 
   /* 
   TODO 7: determine the next row and column for the snake's head
