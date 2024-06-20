@@ -232,6 +232,7 @@ function hasCollidedWithSnake() {
   HINT: Each part of the snake's body is stored in the snake.body Array. The
   head and each part of the snake's body also knows its own row and column.
   
+  Uncomplicate the if statement, itterate over snake array to compare.
   */
   if(snake.head.column && snake.head.row === snake.body.column && snake.body.row != snake.body[0]){
     return true;
