@@ -235,14 +235,11 @@ function hasCollidedWithSnake() {
   Uncomplicate the if statement, itterate over snake array to compare.
   */
   for(i = 1; i < snake.body.length; i++){
-    
+    if((snake.head.column === snake.body[i].column) && (snake.head.row === snake.body[i].row)){
+      return true;
+    }
   }
-  if((snake.head.column === snake.body.column) && (snake.head.row === snake.body.row)){
-    return true;
-  }
-  else{
-    return false;
-  }
+  return false;
 }
 
 function endGame() {
@@ -358,7 +355,11 @@ function getRandomAvailablePosition() {
   while (!spaceIsAvailable) {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
-    spaceIsAvailable = true;
+    for(i = 0; i < snake.body.length; i++){
+      if((apple.column != snake.body[i].column) && (apple.row != snake.body[i].row)){
+        spaceIsAvailable = true;
+      }
+    }
 
     /*
     TODO 13: After generating the random position determine if that position is
