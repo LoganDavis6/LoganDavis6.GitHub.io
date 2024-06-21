@@ -234,7 +234,7 @@ function hasCollidedWithSnake() {
   
   Uncomplicate the if statement, itterate over snake array to compare.
   */
-  if((snake.head.column === snake.body.column) && (snake.head.row === snake.body.column)){
+  if((snake.head.column === snake.body.column) && (snake.head.row === snake.body.row)){
     return true;
   }
   else{
