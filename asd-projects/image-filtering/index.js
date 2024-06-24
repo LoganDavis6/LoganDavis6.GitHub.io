@@ -48,11 +48,16 @@ function applyFilter(filterFunction){
 
 
 // TODO 5: Create the keepInBounds function
-
+function keepInBounds(number){
+  var biggest = 255;
+  var smallest = 0;
+  var result = Math.max(biggest, smallest);
+  Math.min(result, smallest);
+}
 
 // TODO 3: Create reddify function
 function reddify(colorArray){
-  rgbNumbers[RED] = 200;
+  colorArray[RED] = 200;
 }
 
 // TODO 6: Create more filter functions
