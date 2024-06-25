@@ -48,9 +48,23 @@ function applyFilter(filterFunction){
 
 
 // TODO 5: Create the keepInBounds function
-function keepInBounds(number){
-  return number ? number > 0 : 0;
+/*
+function example() {
+  return condition1 ? value1
+    : condition2 ? value2
+    : condition3 ? value3
+    : value4;
 }
+*/
+function keepInBounds(number){
+  return number < 0 ? 0 
+  : number > 255 ? 255
+  : number;
+}
+
+console.log(keepInBounds(-30)); // should print 0
+console.log(keepInBounds(300)); // should print 255
+console.log(keepInBounds(127)); // should print 127
 
 // TODO 3: Create reddify function
 function reddify(colorArray){
@@ -58,6 +72,8 @@ function reddify(colorArray){
 }
 
 // TODO 6: Create more filter functions
-
-
+function decreaseBlue(specialArray){
+  specialArray[BLUE] - 50;
+  keepInBounds(specialArray - 50);
+}
 // CHALLENGE code goes below here
