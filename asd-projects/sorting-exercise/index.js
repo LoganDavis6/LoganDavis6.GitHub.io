@@ -30,7 +30,6 @@ function bubbleSort(array){
 
 // TODO 3: Implement quickSort
 
-
 // TODOs 4 & 5: Implement partition
 
 
