@@ -35,9 +35,9 @@ async function bubbleSort(array, i, j){
 // TODO 1: Implement swap
 function swap(array, i, j){
     var temp;
-    temp = array[i];
-    array[j] = array[i];
-    array[i] = temp;
+    temp = array[i]; //array[i] becomes temp and array[i] is now nothing while temp is holding array[i].
+    array[j] = temp; //temp shoves array[i]'s old data into array[j].
+    array[j] = array[i]; //array[i] becomes array[j] and array[j] becomes nothing.
     drawSwap(array, i, j);
 }
 
