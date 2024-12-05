@@ -12,7 +12,7 @@
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
     "fs": "0.0.1-security",
-    "mocha": "^4.0.0",
+    "mocha": "^11.0.1",
     "sinon": "^3.3.0"
   },
   "scripts": {
