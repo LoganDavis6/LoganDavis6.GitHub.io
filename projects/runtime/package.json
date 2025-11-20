@@ -13,7 +13,7 @@
     "cheerio": "^1.0.0-rc.2",
     "fs": "0.0.1-security",
     "mocha": "^4.0.0",
-    "sinon": "^3.3.0"
+    "sinon": "^16.1.2"
   },
   "scripts": {
     "pretest": "npm install",
